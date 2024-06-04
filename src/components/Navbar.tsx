@@ -11,7 +11,7 @@ const Navbar = () => {
         setMenuOpen(!menuOpen);
     };
 
-    const handleMenuClick = (e) => {
+    const handleMenuClick = (e: any) => {
         setSelectedKey(e.key);
         setMenuOpen(false); // Close the menu after selecting an item
     };
