@@ -1,5 +1,4 @@
-import { useState } from "react";
-import Sidebar from "../components/Sidebar";
+/* import { useState } from "react";
 import { Outlet } from "react-router-dom";
 
 const Layout = () => {
@@ -25,7 +24,7 @@ const Layout = () => {
         overflowY: 'auto',
       }}>
         <div className="">
-          {/*  <Navbar /> */}
+          {/*  <Navbar /> 
         </div>
         <div>
           <Outlet />
@@ -36,3 +35,4 @@ const Layout = () => {
 };
 
 export default Layout;
+ */

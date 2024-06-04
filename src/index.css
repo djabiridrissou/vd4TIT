@@ -268,3 +268,7 @@ body {
   z-index: 1000; /* Ensure navbar is on top of other content */
 }
  
+.eledessous {
+  position: relative; /* Assurez-vous que l'élément a une position relative ou absolue */
+  z-index: -1; /* Définit un z-index inférieur à celui de la barre de navigation */
+}
