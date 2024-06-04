@@ -5,11 +5,11 @@ import { IoBook } from "react-icons/io5";
 import { BsQuestionCircleFill } from "react-icons/bs";
 import { RiTeamFill } from "react-icons/ri";
 import { SiConsul } from "react-icons/si";
-import { MdOutlineDeveloperMode } from "react-icons/md";
 import { IoIosCreate } from "react-icons/io";
 import { IoCall } from "react-icons/io5";
 import { FaLocationCrosshairs } from "react-icons/fa6";
 import { IoMail } from "react-icons/io5";
+import { MdOutlineDeveloperMode } from "react-icons/md";
 
 const contentStyle: React.CSSProperties = {
   textAlign: 'center',
@@ -94,8 +94,8 @@ const LandingPage = () => {
           <div className="items-center justify-center h-1 bg-green-600"></div>
         </div>
 
-        <div className='md:flex md:mx-80'>
-          <div className="mt-16 flex flex-col mx-10 md:mx-1">
+        <div className='lg:flex lg:mx-80'>
+          <div className="mt-16 flex flex-col mx-10 lg:mx-1">
             <span className="text-yellow-700 font-semibold">Vandzilah TECHNOLOGY</span>
             <span className="mt-4 text-xl text-green-800">Solution Through Innovations</span>
             <div className="mt-4">
@@ -146,7 +146,7 @@ const LandingPage = () => {
             <span className="lg:ml-4">we set them!</span>
           </div>
           <div className="w-full mt-6">
-            <Carousel autoplay className="md:mx-80 md:bg-white md:flex" slidesToShow={2}>
+            <Carousel autoplay className="lg:mx-80 lg:bg-white lg:flex" slidesToShow={2}>
               <div className='eledessous '>
                 <img src="/images/network.jpg" alt="Network" style={contentStyle} />
               </div>
@@ -166,8 +166,8 @@ const LandingPage = () => {
 
 
         {/* Why Choose Us */}
-        <div className="md:mx-80 md:flex md:justify-between">
-          <div className="mx-10 mt-8 flex flex-col md:w-1/2">
+        <div className="lg:mx-80 lg:flex lg:justify-between">
+          <div className="mx-10 mt-8 flex flex-col lg:w-1/2">
             <span className="text-yellow-700 font-semibold">How we work</span>
             <div className="mt-4 flex flex-col text-green-800 font-semibold text-3xl">
               <h1>Pragmatic people</h1>
@@ -182,19 +182,19 @@ const LandingPage = () => {
                 Our approach is simple yet powerful:
               </p>
               <div className="mt-6 flex flex-col space-y-4 eledessous">
-                <Card className="w-full h-[80px] shadow-md">
+                <Card className="w-full h-[80px] shadow-lg">
                   <div className="flex items-center flex-col -mt-4">
                     <SiConsul size={30} className="text-green-600" />
                     <span className="mt-2 text-green-800 font-semibold">Consult</span>
                   </div>
                 </Card>
-                <Card className="w-full h-[80px] shadow-md">
+                <Card className="w-full h-[80px] shadow-lg">
                   <div className="flex items-center flex-col -mt-4">
                     <MdOutlineDeveloperMode size={30} className="text-green-600" />
                     <span className="mt-2 text-green-800 font-semibold">Develop</span>
                   </div>
                 </Card>
-                <Card className="w-full h-[80px] shadow-md">
+                <Card className="w-full h-[80px] shadow-lg">
                   <div className="flex items-center flex-col -mt-4">
                     <IoIosCreate size={30} className="text-green-600" />
                     <span className="mt-2 text-green-800 font-semibold">Create</span>
@@ -206,22 +206,22 @@ const LandingPage = () => {
 
 
           {/* */}
-          <div className="mt-8 md:w-1/2">
-            <img src="/images/leader.jpg" alt="" className='md:h-[498px]' />
+          <div className="mt-8 lg:w-1/2">
+            <img src="/images/leader.jpg" alt="" className='lg:h-[498px]' />
           </div>
         </div>
 
-        <div className="relative h-[540px] eledessous md:mt-40">
+        <div className="relative h-[540px] eledessous lg:mt-40">
           <div className="">
             <div className="w-full ">
               <img src="/images/teamConclu.jpg" alt="Team Landing" className="absolute inset-0 w-full h-full object-cover " />
               <div className="absolute inset-0 flex flex-col items-center justify-center bg-green-800 opacity-70"> </div>
               <div className="absolute inset-0 flex text-[15px] flex-col items-center justify-center">
-                <h1 className="mx-4 text-white text-center md:flex md:items-center md:justify-center font-bold text-lg md:text-xl xl:text-3xl">We provide all our clients with customized
+                <h1 className="mx-4 text-white text-center lg:flex lg:items-center lg:justify-center font-bold text-lg lg:text-xl xl:text-3xl">We provide all our clients with customized
                   solutions, leveraging digital innovations for growth,
                   improvements, and development.</h1>
                 <div className="ml-40 mt-2 mb-11">
-                  <span className="text-white text-xl md:text-xl lg:text-xl font-cursive">Maxwell Dzillah, CEO</span>
+                  <span className="text-white text-xl lg:text-xl font-cursive">Maxwell Dzillah, CEO</span>
                 </div>
                 <div className="mx-6 text-center">
                   <p className="text-white text-xs">
@@ -245,11 +245,11 @@ const LandingPage = () => {
         {/* Testimonials */}
         <div className="mt-12 flex flex-col items-center">
           <span className="text-yellow-700 font-semibold">Testimonial</span>
-          <div className="mt-4 text-center md:flex md:space-x-2 text-xl font-semibold text-green-800">
+          <div className="mt-4 text-center lg:flex lg:space-x-2 text-xl font-semibold text-green-800">
             <p>Our Clients</p>
             <p>Reviews</p>
           </div>
-          <div className="mt-8 text-center text-md space-x-4 space-y-2 italic">
+          <div className="mt-8 text-center text-lg space-x-4 space-y-2 italic">
             <p>"It was an interesting
               challenge to design</p>
             <p>and develop an remotely
@@ -269,8 +269,8 @@ const LandingPage = () => {
           </div>
         </div>
 
-        <div className="md:flex mt-24 md:w-full items-center justify-between md:px-24 bg-green-900">
-          <div className=" bg-green-900 py-12 border-b-2 border-white md:border-none">
+        <div className="lg:flex mt-24 lg:w-full items-center justify-between lg:px-24 bg-green-900">
+          <div className=" bg-green-900 py-12 border-b-2 border-white lg:border-none">
             <div className="mx-10 w-20 h-20  bg-green-700 flex items-center flex-col justify-center">
               <IoCall color="white" size={24} />
             </div>
@@ -279,7 +279,7 @@ const LandingPage = () => {
               <span className="mt-4 font-semibold text-white">+233(0) 20 656 2493</span>
             </div>
           </div>
-          <div className=" bg-green-900 py-12 border-b-2 border-white md:border-none">
+          <div className=" bg-green-900 py-12 border-b-2 border-white lg:border-none">
             <div className="mx-10 w-20 h-20 bg-green-700 flex items-center flex-col justify-center">
               <IoMail color="white" size={24} />
             </div>
@@ -288,7 +288,7 @@ const LandingPage = () => {
               <span className="mt-4 font-semibold text-white">info@vandzilahtechnologies.com</span>
             </div>
           </div>
-          <div className=" bg-green-900 py-12 border-b-2 border-white md:border-none">
+          <div className=" bg-green-900 py-12 border-b-2 border-white lg:border-none">
             <div className="mx-10 w-20 h-20 bg-green-700 flex items-center flex-col justify-center">
               <FaLocationCrosshairs color="white" size={24} />
             </div>
@@ -302,7 +302,7 @@ const LandingPage = () => {
         <div className=" flex flex-col items-center justify-center">
           <img src="/images/socials.jpeg " alt="" className="w-70 h-10 mt-8" />
         </div>
-        <div className="mt-12 border-t-2 mx-2 py-4 md:justify-between border-green-800 md:mx-80 flex md:flex-row flex-col items-center justify-center lg:flex lg:justify-between">
+        <div className="mt-12 border-t-2 mx-2 py-4 border-green-800 lg:mx-80 flex lg:flex-row flex-col items-center justify-center lg:flex lg:justify-between">
           <span className="text-3xl text-green-800">Vandzilah Technology</span>
           <span>Powered by <span className="text-yellow-700">Vandzillah Technology</span></span>
         </div>
