@@ -24,7 +24,7 @@ const Navbar = () => {
     ];
 
     return (
-        <div className="lg:px-80 bg-white fixed  inset-x-0  top-0 thead h-20 w-full flex items-center z-999999 inset-0 ">
+        <div className=" bg-white fixed  inset-x-0  top-0 thead h-20 w-full flex items-center z-999999 inset-0 ">
             <div className="flex justify-between items-center w-full mx-4">
                 <div className='flex justify-center items-center flex-col cursor-pointer'>
                     <h1 className="text-green-800 font-bold text-xl">Vandzillah</h1>
