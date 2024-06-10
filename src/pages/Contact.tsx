@@ -25,7 +25,7 @@ const Contact = () => {
                 </div>
 
                 {/* Body */}
-                <div className="flex flex-col lg:items-center mx-4 bg-slate-100 ">
+                <div className="flex flex-col lg:items-center mx-4  ">
                     <div className=" max-w-7xl flex flex-col flex-wrap items-start mt-8 justify-center">
                         {/* team and building */}
                         <div className="flex flex-col lg:flex-row space-x-4  w-full lg:max-w-6xl">
@@ -107,15 +107,15 @@ const Contact = () => {
                         </div>
 
                         {/* form */}
-                        <div className="flex flex-col space-y-8 mt-12">
+                        <div className="flex flex-col space-y-8 mt-12 ">
                             <span className="font-bold text-green-700 text-2xl">Please fill out the form below and we will contact you soon</span>
                             <p className="text-xl">We respect your identity and privacy. All the informations you will provide are confidential. Nevertheless, a copy of your message might be stored in our records as a database entry for archival purposes:</p>
-                            <div className="mt-6">
+                            <div className="mt-6 ">
                                 <div className="flex flex-col ">
                                     <div className="flex space-x-3">
                                         <span className="text-xl">Name</span><span className="text-red-500">*</span>
                                     </div>
-                                    <Input style={{ width: '100%', height: '40px' }} />
+                                    <Input style={{ width: '100%', height: '40px' }} className="" />
                                 </div>
                                 <div className="flex flex-col mt-6">
                                     <div className="flex space-x-3">
@@ -142,7 +142,7 @@ const Contact = () => {
                         </div>
                     </div>
                 </div>
-                <div className="h-20 bg-slate-100"></div>
+                <div className="h-20"></div>
                 <div className="">
                     <Footer />
                 </div>
