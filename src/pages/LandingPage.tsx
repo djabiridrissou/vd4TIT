@@ -25,7 +25,6 @@ const contentStyle: React.CSSProperties = {
 };
 
 const LandingPage = () => {
-  const navigate = useNavigate();
   const { ref: leftRef, inView: leftInView } = useInView({ triggerOnce: true });
   const { ref: rightRef, inView: rightInView } = useInView({ triggerOnce: true });
   const { ref: left2Ref, inView: left2InView } = useInView({ triggerOnce: true });

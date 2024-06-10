@@ -12,7 +12,7 @@ const Navbar = () => {
         setMenuOpen(!menuOpen);
     };
 
-    const handleMenuClick = (e: any) => {
+    const handleMenuClick = () => {
         setMenuOpen(false); // Close the menu after selecting an item
     };
 
