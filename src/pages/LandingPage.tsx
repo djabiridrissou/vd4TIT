@@ -13,6 +13,8 @@ import { MdOutlineDeveloperMode } from "react-icons/md";
 import { GrHostMaintenance } from "react-icons/gr";
 import { SiHomeadvisor } from "react-icons/si";
 import { useInView } from 'react-intersection-observer';
+import Footer from '../components/Footer';
+import { Link, useNavigate } from 'react-router-dom';
 
 const contentStyle: React.CSSProperties = {
   textAlign: 'center',
@@ -37,7 +39,7 @@ const LandingPage = () => {
         <Navbar />
         <div className="relative h-[520px] md:h-[1000px] eledessous ">
           <img src="/images/teamsmall.jpg" alt="Team Small" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 flex flex-col items-center justify-center bg-green-600 bg-opacity-50 animateOnScroll">
+          <div className="absolute inset-0 flex flex-col items-center justify-center bg-green-800 bg-opacity-50 animateOnScroll">
             <div className="text-center text-white">
               <div className=" md:flex items-center justify-center">
                 <h1 className="text-2xl md:text-3xl font-bold md:whitespace-nowrap">Just Like Technology We Never Stop Evolving</h1>
@@ -46,7 +48,9 @@ const LandingPage = () => {
                 <h4 className="text-xs md:text-sm md:whitespace-nowrap">Our technical expertise is constantly evolving. We are fully proficient in a wide selection of fields and continuously growing.</h4>
               </div>
               <div className="mt-12">
-                <button className="bg-green-600 px-12 py-2 text-white font-semibold">Explore More</button>
+                <Link to="/services">
+                  <button className="bg-green-600 px-12 cursor-pointer py-2 text-white font-semibold">Explore More</button>
+                </Link>
               </div>
             </div>
           </div>
@@ -54,67 +58,67 @@ const LandingPage = () => {
 
 
         <div className="flex eledessous flex-col md:flex-row justify-between lg:justify-center md:space-x-4 md:mx-2 -mt-20 mx-2 animateOnScroll">
-      <div className="md:hidden items-center justify-center mx-2 -mt-4">
-        <div className="items-center justify-center h-1"></div>
-      </div>
-      <Card
-        ref={card1Ref}
-        className={`eledessous mb-4 md:mb-0 shadow-md ${card1InView ? 'slide-in-down' : ''}`}
-      >
-        <div className="flex items-center justify-center flex-col">
-          <IoBook size={60} className="text-green-800" />
-          <span className="mt-2 text-2xl text-green-800 font-semibold md:whitespace-nowrap">Why Hire Us</span>
-          <div className="flex flex-col items-center mt-4">
-            <span>We provide customized, targeted and tailored</span>
-            <span>solutions for all</span>
+          <div className="md:hidden items-center justify-center mx-2 -mt-4">
+            <div className="items-center justify-center h-1"></div>
           </div>
-          <div className="mt-4">
-            <button className="bg-green-600 px-8 py-2 text-white font-semibold">Learn More</button>
+          <Card
+            ref={card1Ref}
+            className={`eledessous mb-4 md:mb-0 shadow-md ${card1InView ? 'slide-in-down' : ''}`}
+          >
+            <div className="flex items-center justify-center flex-col">
+              <IoBook size={60} className="text-green-800" />
+              <span className="mt-2 text-2xl text-green-800 font-semibold md:whitespace-nowrap">Why Hire Us</span>
+              <div className="flex flex-col items-center mt-4">
+                <span>We provide customized, targeted and tailored</span>
+                <span>solutions for all</span>
+              </div>
+              <div className="mt-4">
+                <button className="bg-green-600 px-8 py-2 text-white font-semibold">Learn More</button>
+              </div>
+            </div>
+          </Card>
+          <div className="md:hidden items-center justify-center mx-2 -mt-4">
+            <div className="items-center justify-center h-1 bg-green-600"></div>
           </div>
+          <Card
+            ref={card2Ref}
+            className={`eledessous mb-4 md:mb-0 bg-green-600 shadow-md ${card2InView ? 'slide-in-down' : ''}`}
+          >
+            <div className="flex items-center justify-center flex-col">
+              <BsQuestionCircleFill size={60} className="text-green-800" color="white" />
+              <span className="mt-2 text-2xl md:whitespace-nowrap text-white first-line:font-semibold">Why Hire Us</span>
+              <div className="flex flex-col items-center mt-4 text-white">
+                <span>We provide customized, targeted and tailored</span>
+                <span>solutions for all</span>
+              </div>
+              <div className="mt-4">
+                <button className="bg-white px-8 py-2 text-green-800 font-semibold">Learn More</button>
+              </div>
+            </div>
+          </Card>
+          <div className="md:hidden items-center justify-center mx-2 -mt-4">
+            <div className="items-center justify-center h-1 bg-green-600"></div>
+          </div>
+          <Card
+            ref={card3Ref}
+            className={`eledessous mb-4 md:mb-0 shadow-md ${card3InView ? 'slide-in-down' : ''}`}
+          >
+            <div className="flex items-center justify-center flex-col">
+              <RiTeamFill size={60} className="text-green-800" />
+              <span className="mt-2 text-2xl text-green-800 font-semibold md:whitespace-nowrap">Our Team</span>
+              <div className="flex flex-col items-center mt-4">
+                <span>We provide customized, targeted and tailored</span>
+                <span>solutions for all</span>
+              </div>
+              <div className="mt-4">
+                <button className="bg-green-600 px-8 py-2 text-white font-semibold">Learn More</button>
+              </div>
+            </div>
+          </Card>
         </div>
-      </Card>
-      <div className="md:hidden items-center justify-center mx-2 -mt-4">
-        <div className="items-center justify-center h-1 bg-green-600"></div>
-      </div>
-      <Card
-        ref={card2Ref}
-        className={`eledessous mb-4 md:mb-0 bg-green-600 shadow-md ${card2InView ? 'slide-in-down' : ''}`}
-      >
-        <div className="flex items-center justify-center flex-col">
-          <BsQuestionCircleFill size={60} className="text-green-800" color="white" />
-          <span className="mt-2 text-2xl md:whitespace-nowrap text-white first-line:font-semibold">Why Hire Us</span>
-          <div className="flex flex-col items-center mt-4 text-white">
-            <span>We provide customized, targeted and tailored</span>
-            <span>solutions for all</span>
-          </div>
-          <div className="mt-4">
-            <button className="bg-white px-8 py-2 text-green-800 font-semibold">Learn More</button>
-          </div>
-        </div>
-      </Card>
-      <div className="md:hidden items-center justify-center mx-2 -mt-4">
-        <div className="items-center justify-center h-1 bg-green-600"></div>
-      </div>
-      <Card
-        ref={card3Ref}
-        className={`eledessous mb-4 md:mb-0 shadow-md ${card3InView ? 'slide-in-down' : ''}`}
-      >
-        <div className="flex items-center justify-center flex-col">
-          <RiTeamFill size={60} className="text-green-800" />
-          <span className="mt-2 text-2xl text-green-800 font-semibold md:whitespace-nowrap">Our Team</span>
-          <div className="flex flex-col items-center mt-4">
-            <span>We provide customized, targeted and tailored</span>
-            <span>solutions for all</span>
-          </div>
-          <div className="mt-4">
-            <button className="bg-green-600 px-8 py-2 text-white font-semibold">Learn More</button>
-          </div>
-        </div>
-      </Card>
-    </div>
 
 
-        <div className='md:flex  md:mx-2 justify-between items-center lg:justify-center   w-full'>
+        <div className='md:flex eledessous md:mx-2 justify-between items-center lg:justify-center   w-full'>
           <div className='md:flex space-x-4 max-w-6xl'>
             <div ref={leftRef}
               className={`flex flex-col mx-10 md:mx-1 mt-12 ${leftInView ? 'slide-in-left' : ''}`}>
@@ -192,7 +196,7 @@ const LandingPage = () => {
 
 
         {/* Why Choose Us */}
-        <div className='md:flex  md:mx-2 justify-between items-center lg:justify-center   w-full'>
+        <div className='md:flex eledessous  md:mx-2 justify-between items-center lg:justify-center   w-full'>
           <div className='md:flex space-x-4 max-w-6xl'>
             <div className={`flex flex-col mx-10 md:mx-1 mt-12 ${left2InView ? 'slide-in-left' : ''}`} ref={left2Ref}>
               <span className="text-yellow-700 font-semibold">How we work</span>
@@ -357,25 +361,7 @@ const LandingPage = () => {
             </div>
           </div>
         </div>
-
-        {/*  <div className=" flex flex-col items-center justify-center">
-          <img src="/images/socials.jpeg " alt="" className="w-70 h-10 mt-8" />
-        </div> */}
-        <div className="mt-12 border-t-2 md:w-full mx-2 py-4 border-green-800 flex flex-col items-center justify-center  md:justify-between">
-          <span className="text-3xl text-green-800">Vandzilah Technology</span>
-          <span>Powered by <span className="text-yellow-700">Vandzillah Technology</span></span>
-        </div>
-
-        <div className="mt-8 flex flex-col items-center justify-center ">
-          <span className="text-[4px]">Site web conçu par <span className='text-yellow-700'>@d11b1r</span></span>
-        </div>
-        {/* Social Media Logos */}
-        {/* <div className="flex items-center justify-center mt-8 mb-8">
-          <img src="/images/facebook.svg" alt="Facebook" className="w-8 h-8 mx-2" />
-          <img src="/images/instagram.png" alt="Instagram" className="w-8 h-8 mx-2" />
-          <img src="/images/twitter.svg" alt="Twitter" className="w-8 h-8 mx-2" />
-          <img src="/images/linkedin.png" alt="LinkedIn" className="w-8 h-8 mx-2" />
-        </div> */}
+        <Footer />
       </div>
     </>
   );
