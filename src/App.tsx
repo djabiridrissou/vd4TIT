@@ -1,19 +1,18 @@
 import { Route, Routes } from "react-router-dom";
-import './index.css'
+import './index.css';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import {
- LandingPage,
- Team,
- Services,
- Contact
-} from "./routes/routes";
+import { LandingPage } from "./routes/routes";
+import { Team } from "./routes/routes";
+import { Services } from "./routes/routes";
+import { Contact } from "./routes/routes";
+import Navbar from './components/Navbar';
 
 function App() {
-
   return (
-    <>
+   
       <div>
+        <Navbar />
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/team" element={<Team />} />
@@ -22,7 +21,7 @@ function App() {
         </Routes>
         <ToastContainer />
       </div>
-    </>
+
   );
 }
 
