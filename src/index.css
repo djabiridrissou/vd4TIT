@@ -345,3 +345,24 @@ body {
 .slide-in-down {
   animation: slideInFromTop 1s ease-out forwards;
 }
+
+.menu-item {
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.menu-item::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: transparent;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.menu-item.selected::after {
+  background-color: #38a169; /* Couleur verte */
+  transform: scaleX(1);
+}

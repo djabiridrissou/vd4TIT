@@ -1,40 +1,57 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { HiOutlineBars3BottomRight } from "react-icons/hi2";
 import { ImCross } from "react-icons/im";
 import { Menu } from 'antd';
+import { Link, useLocation } from 'react-router-dom'; // Importez Link en plus de useLocation
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
-    const [selectedKey, setSelectedKey] = useState('1'); // "Home" is selected by default
+    const location = useLocation(); // Obtenez la route actuelle
 
     const handleMenuToggle = () => {
         setMenuOpen(!menuOpen);
     };
 
     const handleMenuClick = (e: any) => {
-        setSelectedKey(e.key);
         setMenuOpen(false); // Close the menu after selecting an item
     };
 
     const menuItems = [
-        { key: '1', label: 'Home' },
-        { key: '2', label: 'About Us' },
-        { key: '3', label: 'Services' },
-        { key: '4', label: 'Our Team' },
+        { key: '/home', label: 'Home', path: '/' },
+        { key: '/services', label: 'Services', path: '/services' },
+        { key: '/team', label: 'Our Team', path: '/team' },
+        { key: '/contact', label: 'Contact Us', path: '/contact' },
     ];
 
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth >= 768) {
+                setMenuOpen(false);
+            }
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+    
     return (
-        <div className=" bg-white fixed  inset-x-0  top-0 thead h-20 w-full flex items-center z-999999 inset-0 ">
+        <div className=" bg-white fixed inset-x-0 top-0 thead h-24 w-full flex items-center z-999999 inset-0 ">
             <div className="flex justify-between items-center w-full mx-4">
                 <div className='flex justify-center items-center flex-col cursor-pointer'>
-                    <h1 className="text-green-800 font-bold text-xl">Vandzillah</h1>
+                    <Link to="/">
+                     <h1 className="text-green-800 font-bold text-xl">Vandzilah</h1>
                     <h1 className="text-green-800 font-bold text-xl">Technology</h1>
+                    </Link>
+                   
                 </div>
                 <div className='hidden md:flex justify-center items-center space-x-8 text-green-800 font-semibold cursor-pointer'>
-                    <span className="pb-2 border-b-2 border-green-800">Home</span>
-                    <span>About Us</span>
-                    <span>Services</span>
-                    <span>Our Team</span>
+                    {menuItems.map(item => (
+                        <Link key={item.key} to={item.path} className={`menu-item ${location.pathname === item.path ? 'selected' : ''}`}>
+                            {item.label}
+                        </Link>
+                    ))}
                 </div>
                 <div className='flex justify-center items-center cursor-pointer md:hidden'>
                     {menuOpen ? (
@@ -50,12 +67,13 @@ const Navbar = () => {
                     mode="inline"
                     className="absolute top-20 left-0 w-full z-50 custom-menu"
                     style={{ backgroundColor: 'white' }}
-                    selectedKeys={[selectedKey]}
                     onClick={handleMenuClick}
                 >
                     {menuItems.map(item => (
                         <Menu.Item key={item.key} className="custom-menu-item">
-                            {item.label}
+                            <Link to={item.path}>
+                                {item.label}
+                            </Link>
                         </Menu.Item>
                     ))}
                 </Menu>
