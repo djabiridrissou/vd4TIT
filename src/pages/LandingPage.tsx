@@ -14,7 +14,7 @@ import { GrHostMaintenance } from "react-icons/gr";
 import { SiHomeadvisor } from "react-icons/si";
 import { useInView } from 'react-intersection-observer';
 import Footer from '../components/Footer';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const contentStyle: React.CSSProperties = {
   textAlign: 'center',
