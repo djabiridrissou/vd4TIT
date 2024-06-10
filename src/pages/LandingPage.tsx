@@ -14,7 +14,7 @@ import { GrHostMaintenance } from "react-icons/gr";
 import { SiHomeadvisor } from "react-icons/si";
 import { useInView } from 'react-intersection-observer';
 import Footer from '../components/Footer';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const contentStyle: React.CSSProperties = {
   textAlign: 'center',
@@ -25,6 +25,7 @@ const contentStyle: React.CSSProperties = {
 };
 
 const LandingPage = () => {
+  const navigate = useNavigate();
   const { ref: leftRef, inView: leftInView } = useInView({ triggerOnce: true });
   const { ref: rightRef, inView: rightInView } = useInView({ triggerOnce: true });
   const { ref: left2Ref, inView: left2InView } = useInView({ triggerOnce: true });
@@ -37,9 +38,15 @@ const LandingPage = () => {
     <>
       <div className="mt-[80px] overflow-x-hidden">
         <Navbar />
-        <div className="relative h-[520px] md:h-[1000px] eledessous ">
-          <img src="/images/teamsmall.jpg" alt="Team Small" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 flex flex-col items-center justify-center bg-green-800 bg-opacity-50 animateOnScroll">
+        <div className="relative h-[520px] md:h-[1000px]" style={{
+          backgroundImage: "url('/images/teamsmall.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          width: "100%",
+        }}>
+          {/*           <img src="/images/teamsmall.jpg" alt="Team Small" className="w-full h-full object-cover" /> */}
+          <div className="absolute inset-0 flex flex-col items-center justify-center bg-green-800 bg-opacity-50">
             <div className="text-center text-white">
               <div className=" md:flex items-center justify-center">
                 <h1 className="text-2xl md:text-3xl font-bold md:whitespace-nowrap">Just Like Technology We Never Stop Evolving</h1>
@@ -57,23 +64,23 @@ const LandingPage = () => {
         </div>
 
 
-        <div className="flex eledessous flex-col md:flex-row justify-between lg:justify-center md:space-x-4 md:mx-2 -mt-20 mx-2 animateOnScroll">
+        <div className="flex  flex-col md:flex-row justify-between lg:justify-center  md:space-x-4 md:mx-2 -mt-20 ml-4 mr-2">
           <div className="md:hidden items-center justify-center mx-2 -mt-4">
             <div className="items-center justify-center h-1"></div>
           </div>
           <Card
             ref={card1Ref}
-            className={`eledessous mb-4 md:mb-0 shadow-md ${card1InView ? 'slide-in-down' : ''}`}
+            className={` mb-4 md:mb-0 shadow-md ${card1InView ? 'slide-in-down' : ''}`}
           >
             <div className="flex items-center justify-center flex-col">
               <IoBook size={60} className="text-green-800" />
-              <span className="mt-2 text-2xl text-green-800 font-semibold md:whitespace-nowrap">Why Hire Us</span>
+              <span className="mt-2 text-2xl text-green-800 font-semibold md:whitespace-nowrap">About Us</span>
               <div className="flex flex-col items-center mt-4">
                 <span>We provide customized, targeted and tailored</span>
                 <span>solutions for all</span>
               </div>
               <div className="mt-4">
-                <button className="bg-green-600 px-8 py-2 text-white font-semibold">Learn More</button>
+                <button onClick={() => navigate("/services")} className="bg-green-600 px-8 py-2 text-white font-semibold">Learn More</button>
               </div>
             </div>
           </Card>
@@ -82,17 +89,17 @@ const LandingPage = () => {
           </div>
           <Card
             ref={card2Ref}
-            className={`eledessous mb-4 md:mb-0 bg-green-600 shadow-md ${card2InView ? 'slide-in-down' : ''}`}
+            className={` mb-4 md:mb-0 bg-green-600 shadow-md ${card2InView ? 'slide-in-down' : ''}`}
           >
             <div className="flex items-center justify-center flex-col">
-              <BsQuestionCircleFill size={60} className="text-green-800" color="white" />
-              <span className="mt-2 text-2xl md:whitespace-nowrap text-white first-line:font-semibold">Why Hire Us</span>
+              <RiTeamFill size={60} className="text-green-800" color="white" />
+              <span className="mt-2 text-2xl md:whitespace-nowrap text-white first-line:font-semibold">Who are we</span>
               <div className="flex flex-col items-center mt-4 text-white">
-                <span>We provide customized, targeted and tailored</span>
-                <span>solutions for all</span>
+                <span>A creative and passionate team, dedicated to</span>
+                <span>inovation and excellence</span>
               </div>
               <div className="mt-4">
-                <button className="bg-white px-8 py-2 text-green-800 font-semibold">Learn More</button>
+                <button onClick={() => navigate("/team")} className="bg-white px-8 py-2 text-green-800 font-semibold">Learn More</button>
               </div>
             </div>
           </Card>
@@ -101,17 +108,19 @@ const LandingPage = () => {
           </div>
           <Card
             ref={card3Ref}
-            className={`eledessous mb-4 md:mb-0 shadow-md ${card3InView ? 'slide-in-down' : ''}`}
+            className={` mb-4 md:mb-0 shadow-md ${card3InView ? 'slide-in-down' : ''}`}
           >
             <div className="flex items-center justify-center flex-col">
-              <RiTeamFill size={60} className="text-green-800" />
-              <span className="mt-2 text-2xl text-green-800 font-semibold md:whitespace-nowrap">Our Team</span>
+              <BsQuestionCircleFill size={60} className="text-green-800" />
+              <span className="mt-2 text-2xl text-green-800 font-semibold md:whitespace-nowrap">Why Hire Us</span>
               <div className="flex flex-col items-center mt-4">
-                <span>We provide customized, targeted and tailored</span>
-                <span>solutions for all</span>
+                <span>We are proficient in a wide selection of fields</span>
+                <span>and continuously growing</span>
               </div>
               <div className="mt-4">
-                <button className="bg-green-600 px-8 py-2 text-white font-semibold">Learn More</button>
+                <a href="#how-we-work">
+                  <button className="bg-green-600 px-8 py-2 text-white font-semibold">Learn More</button>
+                </a>
               </div>
             </div>
           </Card>
@@ -196,11 +205,11 @@ const LandingPage = () => {
 
 
         {/* Why Choose Us */}
-        <div className='md:flex eledessous  md:mx-2 justify-between items-center lg:justify-center   w-full'>
+        <div id="how-we-work" className='md:flex eledessous  md:mx-2 justify-between items-center lg:justify-center   w-full'>
           <div className='md:flex space-x-4 max-w-6xl'>
-            <div className={`flex flex-col mx-10 md:mx-1 mt-12 ${left2InView ? 'slide-in-left' : ''}`} ref={left2Ref}>
+            <div  className={`flex flex-col mx-10 md:mx-1 mt-12 ${left2InView ? 'slide-in-left' : ''}`} ref={left2Ref}>
               <span className="text-yellow-700 font-semibold">How we work</span>
-              <div className="mt-4 flex flex-col text-green-800 font-semibold text-3xl">
+              <div  className="mt-4 flex flex-col text-green-800 font-semibold text-3xl">
                 <h1>Pragmatic people</h1>
                 <h1>Who know you are</h1>
               </div>

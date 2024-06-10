@@ -36,10 +36,10 @@ const AuthProvider = ({ children }: any) => {
 
 
   useEffect(() => {
-    const actualRoute = window.location.pathname;
-    if (!authState.isAuthenticated && actualRoute !== "/forgot-password") {
+    //const actualRoute = window.location.pathname;
+    /* if (!authState.isAuthenticated && actualRoute !== "/forgot-password") {
       navigate("/");
-    }
+    } */
   }, [authState.isAuthenticated, navigate]);
 
 

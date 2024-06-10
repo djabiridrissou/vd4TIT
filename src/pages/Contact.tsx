@@ -13,7 +13,7 @@ const Contact = () => {
                 {/* Team Small */}
                 <div className="relative h-[420px] lg:h-[370px] eledessous">
                     <img
-                        src="/images/map.jpg"
+                        src="/images/mapdzilah.png"
                         alt="Team Small"
                         className="w-full h-full object-cover"
                     />

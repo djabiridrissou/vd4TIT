@@ -2,18 +2,22 @@ import { useEffect, useState } from 'react';
 import { HiOutlineBars3BottomRight } from "react-icons/hi2";
 import { ImCross } from "react-icons/im";
 import { Menu } from 'antd';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const location = useLocation();
+    const navigate = useNavigate();
 
     const handleMenuToggle = () => {
         setMenuOpen(!menuOpen);
     };
 
-    const handleMenuClick = () => {
+    const handleMenuClick = (path: string) => {
         setMenuOpen(false);
+        console.log("before navigate", path);
+        navigate(path);
+        console.log("after navigate", path);
     };
 
     const menuItems = [
@@ -35,9 +39,9 @@ const Navbar = () => {
             window.removeEventListener('resize', handleResize);
         };
     }, []);
-    
+
     return (
-        <div className="bg-white fixed inset-x-0 top-0 thead h-24 w-full flex items-center z-999999 inset-0">
+        <div className="bg-white fixed inset-x-0 top-0 thead h-24 w-full flex items-center z-50">
             <div className="flex justify-between items-center w-full mx-4">
                 <div className='flex justify-center items-center flex-col cursor-pointer'>
                     <Link to="/">
@@ -66,13 +70,10 @@ const Navbar = () => {
                     mode="inline"
                     className="absolute top-20 left-0 w-full z-50 custom-menu"
                     style={{ backgroundColor: 'white' }}
-                    onClick={handleMenuClick}
                 >
                     {menuItems.map(item => (
-                        <Menu.Item key={item.key} className="custom-menu-item">
-                            <Link to={item.path}>
-                                {item.label}
-                            </Link>
+                        <Menu.Item key={item.key} className="custom-menu-item" onClick={() => handleMenuClick(item.path)}>
+                            {item.label}
                         </Menu.Item>
                     ))}
                 </Menu>
