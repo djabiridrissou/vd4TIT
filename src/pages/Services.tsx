@@ -25,7 +25,7 @@ const Services = () => {
                             </div>
                             <div className='flex flex-col items-center justify-center mt-2'>
                                 <span className='text-2xl font-bold text-green-700'>Network Engineering</span>
-                                                           </div>
+                            </div>
                         </div>
 
                         <div className='py-4 flex flex-col md:w-1/3'>
@@ -34,7 +34,7 @@ const Services = () => {
                             </div>
                             <div className='mt-2 flex flex-col items-center justify-center'>
                                 <span className='text-2xl font-bold text-green-700'>Web Development</span>
-                               
+
                             </div>
                         </div>
                         <div className='py-4 flex flex-col md:w-1/3'>
@@ -43,7 +43,7 @@ const Services = () => {
                             </div>
                             <div className='mt-2 flex flex-col items-center justify-center'>
                                 <span className='text-2xl font-bold text-green-700'>Internet of Things - IOT</span>
-                               
+
                             </div>
                         </div>
                         <div className='py-4 flex flex-col md:w-1/3'>
@@ -52,7 +52,7 @@ const Services = () => {
                             </div>
                             <div className='mt-2 flex flex-col items-center justify-center'>
                                 <span className='text-2xl font-bold text-green-700'>Graphic Design</span>
-                            
+
                             </div>
                         </div>
                         <div className='py-4 flex flex-col md:w-1/3'>
@@ -61,7 +61,7 @@ const Services = () => {
                             </div>
                             <div className='mt-2 flex flex-col items-center justify-center'>
                                 <span className='text-2xl font-bold text-green-700'>Robotics</span>
-                           
+
                             </div>
                         </div>
                         <div className='py-4 flex flex-col md:w-1/3'>
@@ -70,7 +70,7 @@ const Services = () => {
                             </div>
                             <div className='mt-2 flex flex-col items-center justify-center'>
                                 <span className='text-2xl font-bold text-green-700'>Anlytics and Big Data</span>
-                                
+
                             </div>
                         </div>
                     </div>
